@@ -26,9 +26,10 @@ struct ContentView: View {
         NavigationStack {
             List(filteredDinos) { predator in
                 NavigationLink {
-                    Image(predator.image)
-                        .resizable()
-                        .scaledToFit()
+                    PredatorDetail(predator: predator)
+//                    Image(predator.image)
+//                        .resizable()
+//                        .scaledToFit()
                 } label: {
                     
                     HStack {
@@ -88,6 +89,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationTitle("Apex Predators")
         }
         .preferredColorScheme(.dark)
     }
